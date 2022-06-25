@@ -1,19 +1,16 @@
 package dio.digitalinnovation.digiobank
 
 class Pessoa {
-    val nome: String = "Adelçon"
-    val cpf: String = "123.456.789-10"
+    var nome: String = "Adelçon"
+    var cpf: String = "123.456.789-10"
+    private set
 
-    inner class Endereco {
-        var rua: String = "Rua Teste"
-    }
-
+    constructor()
+    fun pessoaInfo() = "$nome $cpf"
 }
 
 fun main() {
     val ad = Pessoa()
 
-    println(ad.nome)
-    println(ad.cpf)
-    println(ad.Endereco().rua)
+    println(ad.pessoaInfo())
 }
